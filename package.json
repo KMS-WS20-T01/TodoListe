@@ -7,7 +7,9 @@
     "test-win": "set TEST_BROWSER_DRIVER=puppeteer&& meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "test-app-win": "set TEST_WATCH=1&& meteor test --full-app --driver-package meteortesting:mocha",
-    "visualize": "meteor --production --extra-packages bundle-visualizer"
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+    "format": "prettier --write src/**/*.ts{,x}",
+    "lint": "tslint ./imports/**/*.ts{,x}"
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
@@ -31,7 +33,13 @@
     "@types/react-router-dom": "^5.1.6",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
+    "prettier": "^2.2.1",
     "puppeteer": "^5.5.0",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^9.0.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^5.0.0",
     "typescript": "^4.0.2"
   },
   "meteor": {

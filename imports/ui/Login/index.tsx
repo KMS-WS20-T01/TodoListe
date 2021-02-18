@@ -9,7 +9,7 @@ export const Login = () => {
   const classes = useStyles();
   const history = useHistory();
   const handleSignIn = (username: string, password: string) => {
-    Meteor.loginWithPassword(username, password, (err) => {
+      Meteor.loginWithPassword(username, password, (err) => {
       if (err) return console.log(err);
 
       history.push("/");
