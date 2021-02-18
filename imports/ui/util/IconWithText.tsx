@@ -36,5 +36,3 @@ export const IconWithText: React.FC<IconWithTextProps> = ({
     </div>
   );
 };
-
-export interface empty {}
